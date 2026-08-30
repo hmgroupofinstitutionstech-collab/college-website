@@ -16,6 +16,10 @@ import {
   GraduationCap,
   Lightbulb,
   HeartHandshake,
+  Briefcase,
+  HeartPulse,
+  Stethoscope,
+  Plus,
   type LucideIcon,
 } from "lucide-react";
 
@@ -42,6 +46,7 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Courses", href: "#courses" },
   { label: "Gallery", href: "#gallery" },
   { label: "Trustees", href: "#trustees" },
   { label: "Mission", href: "#mission" },
@@ -53,12 +58,52 @@ export const navLinks: NavLink[] = [
 export const about = {
   heading: "About the College",
   intro:
-    "For nearly three decades, H.M. College Pilani has combined academic rigour with a nurturing, values-driven community.",
+    "H.M. College Pilani is founded on a simple but powerful belief — that education is the surest path out of poverty and the strongest foundation for a fair and compassionate society.",
   paragraphs: [
-    "H.M. College Pilani has grown into a recognised centre of learning spanning the sciences, humanities, engineering and professional studies. Our academic programmes are designed to be both intellectually demanding and deeply practical.",
-    "We believe education is more than examinations. Through mentorship, research opportunities and community engagement, our students graduate as thoughtful, capable and responsible citizens ready to make a difference.",
+    "Our vision is to revolutionise access to quality education for the underprivileged. We are committed to opening the doors of higher learning to students who have long been left behind, so that talent and determination — not financial means — decide how far a student can go.",
+    "Beyond the classroom, the institution is driven by a deep commitment to social service. Through affordable, career-focused programmes, community outreach and support for healthcare and welfare, H.M. College Pilani aims to uplift families and transform lives across the region.",
   ],
 };
+
+/* --- Courses -------------------------------------------------------------- */
+
+export const coursesIntro =
+  "Our academic programmes are launching soon. Here is a glimpse of what's on the way.";
+
+export interface Course {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  /** Show a "Coming Soon" badge and mark the programme as not yet open. */
+  comingSoon: boolean;
+}
+
+export const courses: Course[] = [
+  {
+    title: "BMS",
+    description: "Bachelor of Medical Sciences",
+    icon: Briefcase,
+    comingSoon: true,
+  },
+  {
+    title: "B.Sc Nursing",
+    description: "Bachelor of Science in Nursing",
+    icon: HeartPulse,
+    comingSoon: true,
+  },
+  {
+    title: "GNM",
+    description: "General Nursing & Midwifery",
+    icon: Stethoscope,
+    comingSoon: true,
+  },
+  {
+    title: "Other Paramedical Courses",
+    description: "A range of allied health and paramedical programmes",
+    icon: Plus,
+    comingSoon: true,
+  },
+];
 
 /* --- Gallery -------------------------------------------------------------- */
 
@@ -108,34 +153,16 @@ export interface Trustee {
 }
 
 export const trusteesIntro =
-  "Our institution is guided by experienced leaders committed to academic excellence, responsible governance and student development.";
+  "Our institution is guided by a visionary leader committed to academic excellence, responsible governance and lasting social impact.";
 
 export const trustees: Trustee[] = [
   {
-    name: "Dr. Ananya Sharma",
-    designation: "Chairperson",
+    name: "Dr. Harish Kumar",
+    designation: "Chairman & Managing Trustee",
     description:
-      "A respected educationist with three decades of experience shaping curricula and championing equitable access to higher education.",
-    image: "/images/trustee-1-placeholder.svg",
-    imageAlt: "Portrait placeholder of Dr. Ananya Sharma, Chairperson",
-    profileUrl: "#",
-  },
-  {
-    name: "Mr. Rajiv Mehta",
-    designation: "Managing Trustee",
-    description:
-      "An administrator focused on sustainable institutional growth, transparent governance and strong industry partnerships.",
-    image: "/images/trustee-2-placeholder.svg",
-    imageAlt: "Portrait placeholder of Mr. Rajiv Mehta, Managing Trustee",
-    profileUrl: "#",
-  },
-  {
-    name: "Dr. Kavita Rao",
-    designation: "Academic Trustee",
-    description:
-      "A scholar and mentor devoted to research excellence, faculty development and a student-centred learning culture.",
-    image: "/images/trustee-3-placeholder.svg",
-    imageAlt: "Portrait placeholder of Dr. Kavita Rao, Academic Trustee",
+      "Dr. Harish Kumar is one of Gurugram's foremost business leaders and a practising advocate. Alongside a distinguished career in enterprise and law, he is guided by a singular conviction — that quality healthcare and education must reach the poorest and most underserved in society. H.M. College Pilani is a reflection of that vision: an institution built to make meaningful education accessible to every deserving student, and to serve the wider community with compassion and integrity.",
+    image: "/images/trustee-harish-kumar.jpg",
+    imageAlt: "Portrait of Dr. Harish Kumar, Chairman & Managing Trustee",
     profileUrl: "#",
   },
 ];
@@ -189,7 +216,7 @@ export interface ContactDetails {
 
 export const contact: ContactDetails = {
   address: "College Road, New Delhi, India",
-  phone: "+91 98765 43210",
+  phone: "+91 99288 89308",
   email: "info@abccollege.edu",
   hours: "Monday–Saturday, 9:00 AM–5:00 PM",
 };
@@ -197,6 +224,7 @@ export const contact: ContactDetails = {
 export const footerQuickLinks: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Courses", href: "#courses" },
   { label: "Gallery", href: "#gallery" },
   { label: "Trustees", href: "#trustees" },
   { label: "Contact", href: "#contact" },
