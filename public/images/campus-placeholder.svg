@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="College campus placeholder illustration">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b3a5e"/>
+      <stop offset="1" stop-color="#3a5f88"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1300" cy="180" r="90" fill="#c8a24a" opacity="0.35"/>
+  <!-- distant trees -->
+  <g fill="#274a70" opacity="0.6">
+    <circle cx="120" cy="620" r="70"/><circle cx="200" cy="640" r="90"/><circle cx="1480" cy="630" r="80"/><circle cx="1400" cy="650" r="60"/>
+  </g>
+  <!-- lawn -->
+  <rect y="640" width="1600" height="260" fill="#2f5a3f"/>
+  <rect y="700" width="1600" height="200" fill="#26492f"/>
+  <!-- main academic building -->
+  <g>
+    <rect x="560" y="300" width="480" height="360" fill="#f4f0e6"/>
+    <polygon points="560,300 800,190 1040,300" fill="#d8cfba"/>
+    <polygon points="800,190 800,210 620,300 560,300" fill="#c8a24a" opacity="0.5"/>
+    <!-- columns -->
+    <g fill="#e3ddcc">
+      <rect x="600" y="380" width="26" height="280"/><rect x="680" y="380" width="26" height="280"/>
+      <rect x="760" y="380" width="26" height="280"/><rect x="840" y="380" width="26" height="280"/>
+      <rect x="920" y="380" width="26" height="280"/><rect x="984" y="380" width="26" height="280"/>
+    </g>
+    <rect x="590" y="366" width="430" height="16" fill="#c8a24a"/>
+    <!-- door -->
+    <rect x="772" y="540" width="56" height="120" rx="28" fill="#2b4a6f"/>
+    <!-- dome -->
+    <ellipse cx="800" cy="190" rx="60" ry="30" fill="#c8a24a"/>
+    <rect x="794" y="120" width="12" height="60" fill="#c8a24a"/>
+  </g>
+  <!-- side wings -->
+  <rect x="360" y="420" width="200" height="240" fill="#e9e3d4"/>
+  <rect x="1040" y="420" width="200" height="240" fill="#e9e3d4"/>
+  <g fill="#8ba7c6">
+    <rect x="390" y="460" width="40" height="60"/><rect x="460" y="460" width="40" height="60"/>
+    <rect x="1080" y="460" width="40" height="60"/><rect x="1150" y="460" width="40" height="60"/>
+    <rect x="390" y="560" width="40" height="60"/><rect x="460" y="560" width="40" height="60"/>
+    <rect x="1080" y="560" width="40" height="60"/><rect x="1150" y="560" width="40" height="60"/>
+  </g>
+  <!-- walkway -->
+  <polygon points="740,900 860,900 940,660 660,660" fill="#d9d2c2"/>
+</svg>

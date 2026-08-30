@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="College crest placeholder">
+  <defs>
+    <linearGradient id="crest" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#153458"/>
+      <stop offset="1" stop-color="#0f2a4a"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 3 6 12v20c0 15 11 24 26 29 15-5 26-14 26-29V12L32 3Z" fill="url(#crest)" stroke="#c8a24a" stroke-width="2"/>
+  <path d="M32 18 16 24l16 6 16-6-16-6Z" fill="#c8a24a"/>
+  <path d="M22 27v8c0 3 4.5 5 10 5s10-2 10-5v-8l-10 4-10-4Z" fill="#ffffff" opacity="0.92"/>
+  <rect x="46" y="25" width="2" height="10" rx="1" fill="#c8a24a"/>
+  <circle cx="47" cy="36.5" r="2" fill="#c8a24a"/>
+  <text x="32" y="55" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#c8a24a" font-weight="bold">ABC</text>
+</svg>

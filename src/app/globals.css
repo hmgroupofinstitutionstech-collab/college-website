@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * -----------------------------------------------------------------------------
+ * THEME COLOURS
+ * -----------------------------------------------------------------------------
+ * Edit these variables to re-theme the entire site. Tailwind maps them to the
+ * `navy`, `gold`, `charcoal`, etc. utility classes (see tailwind.config.ts).
+ * -----------------------------------------------------------------------------
+ */
+:root {
+  --color-navy: #0f2a4a; /* Deep navy blue (primary) */
+  --color-navy-dark: #0a1e37; /* Darker navy for depth */
+  --color-gold: #c8a24a; /* Warm gold accent */
+  --color-gold-dark: #a9843a; /* Gold hover / active */
+  --color-charcoal: #24303d; /* Dark charcoal body text */
+  --color-surface-muted: #f4f6f9; /* Light grey background */
+
+  --background: #ffffff;
+  --foreground: var(--color-charcoal);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset in-page anchors so the sticky header never covers section titles. */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading), Georgia, serif;
+  }
+
+  /* Clear, consistent keyboard focus states across the site. */
+  :focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

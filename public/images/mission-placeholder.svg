@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Students learning in a library placeholder illustration">
+  <rect width="1200" height="900" fill="#eef1f5"/>
+  <rect y="620" width="1200" height="280" fill="#e0e5ec"/>
+  <!-- bookshelf backdrop -->
+  <rect x="80" y="120" width="1040" height="420" rx="8" fill="#dfe4ea"/>
+  <g>
+    <rect x="120" y="160" width="960" height="10" fill="#c8a24a"/>
+    <rect x="120" y="300" width="960" height="10" fill="#c8a24a"/>
+    <rect x="120" y="440" width="960" height="10" fill="#c8a24a"/>
+  </g>
+  <g fill="#0f2a4a" opacity="0.85">
+    <rect x="140" y="180" width="26" height="120"/><rect x="172" y="180" width="20" height="120" fill="#3a5f88"/>
+    <rect x="198" y="180" width="30" height="120" fill="#c8a24a"/><rect x="234" y="180" width="22" height="120"/>
+    <rect x="262" y="180" width="26" height="120" fill="#3a5f88"/><rect x="294" y="180" width="20" height="120"/>
+    <rect x="900" y="180" width="26" height="120" fill="#3a5f88"/><rect x="932" y="180" width="20" height="120"/>
+    <rect x="958" y="180" width="30" height="120" fill="#c8a24a"/><rect x="994" y="180" width="22" height="120"/>
+    <rect x="140" y="320" width="24" height="120" fill="#3a5f88"/><rect x="170" y="320" width="28" height="120"/>
+    <rect x="204" y="320" width="20" height="120" fill="#c8a24a"/><rect x="960" y="320" width="26" height="120"/>
+    <rect x="992" y="320" width="22" height="120" fill="#3a5f88"/>
+  </g>
+  <!-- study table -->
+  <rect x="220" y="640" width="760" height="30" rx="6" fill="#0f2a4a"/>
+  <rect x="260" y="670" width="20" height="150" fill="#0f2a4a"/>
+  <rect x="920" y="670" width="20" height="150" fill="#0f2a4a"/>
+  <!-- seated student silhouettes -->
+  <g fill="#3a5f88">
+    <circle cx="430" cy="560" r="48"/><rect x="360" y="612" width="140" height="60" rx="30"/>
+    <circle cx="760" cy="560" r="48"/><rect x="690" y="612" width="140" height="60" rx="30"/>
+  </g>
+  <!-- open book on table -->
+  <g>
+    <polygon points="540,650 600,634 600,662 540,678" fill="#ffffff"/>
+    <polygon points="660,650 600,634 600,662 660,678" fill="#f0f0f0"/>
+    <line x1="600" y1="634" x2="600" y2="662" stroke="#c8a24a" stroke-width="3"/>
+  </g>
+</svg>

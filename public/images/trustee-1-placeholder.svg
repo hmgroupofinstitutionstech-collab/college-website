@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Trustee portrait placeholder">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b3a5e"/><stop offset="1" stop-color="#0f2a4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg1)"/>
+  <circle cx="300" cy="180" r="80" fill="#c8a24a" opacity="0.9"/>
+  <path d="M300 280c-95 0-170 62-170 170h340c0-108-75-170-170-170Z" fill="#c8a24a" opacity="0.9"/>
+  <circle cx="300" cy="180" r="80" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="6"/>
+</svg>
