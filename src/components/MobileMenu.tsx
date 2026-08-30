@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import { navLinks, college } from "@/data/site";
-import Button from "./Button";
 
 interface MobileMenuProps {
   open: boolean;
@@ -100,12 +99,6 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
             ))}
           </ul>
         </nav>
-
-        <div className="border-t border-charcoal/10 p-4">
-          <Button href="#" onClick={onClose} size="md" className="w-full">
-            Apply Now
-          </Button>
-        </div>
       </div>
     </div>
   );

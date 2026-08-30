@@ -16,26 +16,19 @@ import {
   GraduationCap,
   Lightbulb,
   HeartHandshake,
-  BookOpen,
-  FlaskConical,
-  Scale,
-  Cpu,
-  Stethoscope,
-  Landmark,
   type LucideIcon,
 } from "lucide-react";
 
 /* --- College identity ----------------------------------------------------- */
 
 export const college = {
-  name: "ABC College of Excellence",
-  shortName: "ABC College",
-  established: "Established 1995",
-  motto: "Knowledge, Character and Service",
+  name: "H.M. College Pilani",
+  shortName: "H.M. College Pilani",
+  motto: "Knowledge, Character and Service", // TODO: confirm the college's real motto
   heroSupporting:
     "Empowering students through academic excellence, innovation and meaningful learning.",
   description:
-    "ABC College of Excellence is a forward-looking institution dedicated to rigorous scholarship, inclusive learning and the development of principled, capable graduates.",
+    "H.M. College Pilani is a forward-looking institution dedicated to rigorous scholarship, inclusive learning and the development of principled, capable graduates.",
 };
 
 /* --- Navigation ----------------------------------------------------------- */
@@ -49,7 +42,6 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Courses", href: "#courses" },
   { label: "Gallery", href: "#gallery" },
   { label: "Trustees", href: "#trustees" },
   { label: "Mission", href: "#mission" },
@@ -61,74 +53,12 @@ export const navLinks: NavLink[] = [
 export const about = {
   heading: "About the College",
   intro:
-    "For nearly three decades, ABC College of Excellence has combined academic rigour with a nurturing, values-driven community.",
+    "For nearly three decades, H.M. College Pilani has combined academic rigour with a nurturing, values-driven community.",
   paragraphs: [
-    "Founded in 1995, ABC College of Excellence has grown into a recognised centre of learning spanning the sciences, humanities, engineering and professional studies. Our academic programmes are designed to be both intellectually demanding and deeply practical.",
+    "H.M. College Pilani has grown into a recognised centre of learning spanning the sciences, humanities, engineering and professional studies. Our academic programmes are designed to be both intellectually demanding and deeply practical.",
     "We believe education is more than examinations. Through mentorship, research opportunities and community engagement, our students graduate as thoughtful, capable and responsible citizens ready to make a difference.",
   ],
 };
-
-export interface Stat {
-  value: string;
-  label: string;
-}
-
-export const stats: Stat[] = [
-  { value: "30+", label: "Years of Excellence" },
-  { value: "12,000+", label: "Students Enrolled" },
-  { value: "450+", label: "Faculty Members" },
-  { value: "60+", label: "Academic Programmes" },
-];
-
-/* --- Courses -------------------------------------------------------------- */
-
-export const coursesIntro =
-  "Explore a broad range of undergraduate and postgraduate programmes across our faculties.";
-
-export interface Course {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-}
-
-export const courses: Course[] = [
-  {
-    title: "Arts & Humanities",
-    description:
-      "Literature, history, philosophy and languages that sharpen critical thinking and expression.",
-    icon: BookOpen,
-  },
-  {
-    title: "Science & Research",
-    description:
-      "Physics, chemistry, biology and mathematics grounded in laboratory and field research.",
-    icon: FlaskConical,
-  },
-  {
-    title: "Engineering & Technology",
-    description:
-      "Computer science, electronics and mechanical engineering built for real-world impact.",
-    icon: Cpu,
-  },
-  {
-    title: "Law & Governance",
-    description:
-      "Programmes in law, policy and public administration for principled future leaders.",
-    icon: Scale,
-  },
-  {
-    title: "Health Sciences",
-    description:
-      "Nursing, allied health and life sciences preparing compassionate care professionals.",
-    icon: Stethoscope,
-  },
-  {
-    title: "Commerce & Management",
-    description:
-      "Business, economics and management with a focus on ethics and entrepreneurship.",
-    icon: Landmark,
-  },
-];
 
 /* --- Gallery -------------------------------------------------------------- */
 
@@ -267,7 +197,6 @@ export const contact: ContactDetails = {
 export const footerQuickLinks: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Courses", href: "#courses" },
   { label: "Gallery", href: "#gallery" },
   { label: "Trustees", href: "#trustees" },
   { label: "Contact", href: "#contact" },
@@ -292,4 +221,4 @@ export const legalLinks: NavLink[] = [
   { label: "Accessibility", href: "#" },
 ];
 
-export const copyright = `© ${new Date().getFullYear()} ABC College of Excellence. All rights reserved.`;
+export const copyright = `© ${new Date().getFullYear()} H.M. College Pilani. All rights reserved.`;

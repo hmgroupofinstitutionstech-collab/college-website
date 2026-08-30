@@ -18,18 +18,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ABC College of Excellence | Knowledge, Character and Service",
+  title: "H.M. College Pilani | Knowledge, Character and Service",
   description:
-    "Discover academic programmes, institutional leadership and the mission of ABC College of Excellence.",
+    "Discover academic programmes, institutional leadership and the mission of H.M. College Pilani.",
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "ABC College of Excellence | Knowledge, Character and Service",
+    title: "H.M. College Pilani | Knowledge, Character and Service",
     description:
-      "Discover academic programmes, institutional leadership and the mission of ABC College of Excellence.",
+      "Discover academic programmes, institutional leadership and the mission of H.M. College Pilani.",
     type: "website",
-    siteName: "ABC College of Excellence",
+    siteName: "H.M. College Pilani",
   },
 };
 

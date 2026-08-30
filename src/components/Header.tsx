@@ -5,7 +5,6 @@ import { Menu } from "lucide-react";
 import { navLinks } from "@/data/site";
 import Container from "./Container";
 import Logo from "./Logo";
-import Button from "./Button";
 import MobileMenu from "./MobileMenu";
 
 /** Sticky top navigation with a scroll-triggered shadow and mobile menu. */
@@ -30,7 +29,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between md:h-20">
           <Logo tone="dark" />
 
-          {/* Desktop navigation */}
+          {/* Right-aligned desktop navigation */}
           <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {navLinks.map((link) => (
@@ -46,11 +45,7 @@ export default function Header() {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-2">
-            <Button href="#" size="md" className="hidden sm:inline-flex">
-              Apply Now
-            </Button>
-
+          <div className="flex items-center gap-2 lg:hidden">
             {/* Mobile menu toggle */}
             <button
               type="button"

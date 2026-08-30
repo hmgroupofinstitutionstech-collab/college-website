@@ -11,7 +11,6 @@ interface LogoProps {
  */
 export default function Logo({ tone = "dark" }: LogoProps) {
   const nameColor = tone === "light" ? "text-white" : "text-navy";
-  const subColor = tone === "light" ? "text-white/70" : "text-charcoal/60";
 
   return (
     <a
@@ -27,13 +26,8 @@ export default function Logo({ tone = "dark" }: LogoProps) {
         height={44}
         className="h-11 w-11 shrink-0"
       />
-      <span className="flex flex-col leading-tight">
-        <span className={`font-heading text-lg font-bold ${nameColor}`}>
-          {college.shortName}
-        </span>
-        <span className={`text-[11px] font-medium uppercase tracking-wider ${subColor}`}>
-          {college.established}
-        </span>
+      <span className={`font-heading text-lg font-bold leading-tight ${nameColor}`}>
+        {college.shortName}
       </span>
     </a>
   );

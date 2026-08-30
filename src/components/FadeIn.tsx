@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface FadeInProps {
   children: ReactNode;
@@ -10,44 +8,19 @@ interface FadeInProps {
 }
 
 /**
- * Gently fades and lifts its children into view the first time they enter the
- * viewport. Falls back to fully visible content when IntersectionObserver is
- * unavailable, and respects `prefers-reduced-motion` (handled in globals.css).
+ * Subtle entrance animation wrapper.
+ *
+ * Implemented as a pure CSS animation (no JavaScript, no IntersectionObserver),
+ * so content is NEVER left hidden by a timing glitch, fast scroll, background
+ * tab, or missing JS. The animation plays once when the element renders; under
+ * `prefers-reduced-motion` the `motion-safe:` prefix skips it and the content
+ * simply shows at full opacity.
  */
 export default function FadeIn({ children, className = "", delay = 0 }: FadeInProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node || typeof IntersectionObserver === "undefined") {
-      setVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" },
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div
-      ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all duration-700 ease-out motion-reduce:transition-none ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-      } ${className}`}
+      className={`motion-safe:animate-fade-in-up ${className}`}
+      style={delay ? { animationDelay: `${delay}ms` } : undefined}
     >
       {children}
     </div>
