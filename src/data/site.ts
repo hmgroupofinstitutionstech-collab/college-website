@@ -111,6 +111,39 @@ export const galleryIntro =
   "A glimpse of campus life, facilities and community events.";
 
 /**
+ * The gallery is organised into sections by Cloudinary tag.
+ *
+ * Every photo carries the main tag (`hmcollege`). A photo that ALSO carries one
+ * of the category tags below appears in that named section; a photo with only
+ * the main tag falls into the general "Campus" section (see `galleryCampus`).
+ *
+ * To add a new section: create a tag in Cloudinary, tag the relevant photos,
+ * and add one entry here — no other code change needed.
+ */
+export interface GalleryCategory {
+  /** Cloudinary tag applied to this category's photos (alongside `hmcollege`). */
+  tag: string;
+  title: string;
+  description: string;
+}
+
+export const galleryCategories: GalleryCategory[] = [
+  {
+    tag: "library",
+    title: "Library",
+    description:
+      "A calm, well-stocked space for study and research. Our library gives students access to a growing collection of books, journals and digital resources in a focused, welcoming environment.",
+  },
+];
+
+/** Photos with only the main tag (no category tag) are shown here. */
+export const galleryCampus = {
+  title: "Campus",
+  description:
+    "A walk around H.M. College Pilani — our grounds, buildings, facilities and the everyday life that makes up our community.",
+};
+
+/**
  * Each gallery photo is one line: a Cloudinary `publicId` and an `alt` caption.
  * To add a photo, upload it to Cloudinary and add a new entry here — that's it.
  * Until a Cloudinary account is configured (see src/lib/cloudinary.ts), each
@@ -153,7 +186,7 @@ export interface Trustee {
 }
 
 export const trusteesIntro =
-  "Our institution is guided by a visionary leader committed to academic excellence, responsible governance and lasting social impact.";
+  "Our institution is guided by dedicated leaders committed to academic excellence, responsible governance and lasting social impact.";
 
 export const trustees: Trustee[] = [
   {
@@ -163,6 +196,15 @@ export const trustees: Trustee[] = [
       "Dr. Harish Kumar is one of Gurugram's foremost business leaders and a practising advocate. Alongside a distinguished career in enterprise and law, he is guided by a singular conviction — that quality healthcare and education must reach the poorest and most underserved in society. H.M. College Pilani is a reflection of that vision: an institution built to make meaningful education accessible to every deserving student, and to serve the wider community with compassion and integrity.",
     image: "/images/trustee-harish-kumar.jpg",
     imageAlt: "Portrait of Dr. Harish Kumar, Chairman & Managing Trustee",
+    profileUrl: "#",
+  },
+  {
+    name: "Sh. Mange Ram",
+    designation: "Director",
+    description:
+      "Sh. Mange Ram is a dedicated social worker from Haryana with a lifelong commitment to community welfare. He has organised numerous blood donation camps and grassroots initiatives, rallying people around the cause of saving lives. Guided by the spirit of seva — selfless service to society — his vision is to see education and healthcare reach every family in need. As Director of the institution, he brings that same compassion and drive to H.M. College Pilani, championing the college's role as a force for social good.",
+    image: "/images/trustee-mange-ram.jpg",
+    imageAlt: "Portrait of Sh. Mange Ram, Director",
     profileUrl: "#",
   },
 ];

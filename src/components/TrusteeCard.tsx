@@ -9,12 +9,12 @@ interface TrusteeCardProps {
 export default function TrusteeCard({ trustee }: TrusteeCardProps) {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-xl border border-charcoal/10 bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover motion-reduce:transform-none motion-reduce:transition-none">
-      <div className="aspect-[4/3] w-full overflow-hidden bg-surface-muted">
+      <div className="aspect-[4/5] w-full overflow-hidden bg-surface-muted">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={trustee.image}
           alt={trustee.imageAlt}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-top"
         />
       </div>
 

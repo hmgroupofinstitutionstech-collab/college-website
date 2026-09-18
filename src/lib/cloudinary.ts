@@ -77,16 +77,16 @@ interface CloudResource {
 }
 
 /**
- * Fetches the public IDs of every photo tagged `GALLERY_TAG` from Cloudinary.
+ * Fetches the public IDs of every photo carrying a given Cloudinary tag.
  * Runs on the server; results are cached and refreshed hourly (ISR), so newly
  * tagged photos appear automatically without a redeploy. On any failure it
  * returns an empty array and the caller falls back to placeholders — the build
  * never breaks because Cloudinary is briefly unreachable.
  */
-export async function fetchGalleryPublicIds(): Promise<string[]> {
+export async function fetchTaggedPublicIds(tag: string): Promise<string[]> {
   if (!cloudinaryEnabled) return [];
 
-  const url = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/list/${GALLERY_TAG}.json`;
+  const url = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/list/${tag}.json`;
 
   try {
     const res = await fetch(url, { next: { revalidate: 3600 } });
@@ -96,4 +96,9 @@ export async function fetchGalleryPublicIds(): Promise<string[]> {
   } catch {
     return [];
   }
+}
+
+/** Convenience: every photo tagged with the main gallery tag (`GALLERY_TAG`). */
+export function fetchGalleryPublicIds(): Promise<string[]> {
+  return fetchTaggedPublicIds(GALLERY_TAG);
 }
