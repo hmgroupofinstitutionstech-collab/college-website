@@ -16,9 +16,14 @@ import {
   GraduationCap,
   Lightbulb,
   HeartHandshake,
-  Briefcase,
+  Leaf,
+  Flower2,
   HeartPulse,
   Stethoscope,
+  FlaskConical,
+  ScanLine,
+  Syringe,
+  Pill,
   Plus,
   type LucideIcon,
 } from "lucide-react";
@@ -58,10 +63,11 @@ export const navLinks: NavLink[] = [
 export const about = {
   heading: "About the College",
   intro:
-    "H.M. College Pilani is founded on a simple but powerful belief — that education is the surest path out of poverty and the strongest foundation for a fair and compassionate society.",
+    "H.M. College Pilani is part of the H.M. Group of Institutions, run by the Maa Sheetla Education Society. Established in 2022, the college is built on a simple but powerful belief — that quality education should reach everyone, especially the underprivileged.",
   paragraphs: [
-    "Our vision is to revolutionise access to quality education for the underprivileged. We are committed to opening the doors of higher learning to students who have long been left behind, so that talent and determination — not financial means — decide how far a student can go.",
-    "Beyond the classroom, the institution is driven by a deep commitment to social service. Through affordable, career-focused programmes, community outreach and support for healthcare and welfare, H.M. College Pilani aims to uplift families and transform lives across the region.",
+    "The Maa Sheetla Education Society was founded with a clear vision: to open the doors of quality education to the underprivileged, and to give every deserving student — regardless of background or means — a genuine path to a better future.",
+    "As part of the H.M. Group of Institutions, H.M. College Pilani carries that vision forward. We combine affordable, career-focused programmes with a deep commitment to social service, working to uplift families and transform lives across the region.",
+    "With a growing range of programmes in ayurvedic medicine, nursing and allied health sciences, the college is dedicated to nurturing skilled and compassionate professionals who go on to strengthen healthcare in their own communities. Supported by modern facilities, dedicated faculty and a values-driven environment, our students gain not only knowledge, but the confidence and character to lead.",
   ],
 };
 
@@ -80,9 +86,21 @@ export interface Course {
 
 export const courses: Course[] = [
   {
-    title: "BMS",
-    description: "Bachelor of Medical Sciences",
-    icon: Briefcase,
+    title: "BAMS",
+    description: "Bachelor of Ayurvedic Medicine & Surgery",
+    icon: Leaf,
+    comingSoon: true,
+  },
+  {
+    title: "BANYS",
+    description: "Bachelor of Naturopathy & Yogic Sciences",
+    icon: Flower2,
+    comingSoon: true,
+  },
+  {
+    title: "DANP",
+    description: "Diploma in Ayurvedic Nursing & Pharmacy",
+    icon: Pill,
     comingSoon: true,
   },
   {
@@ -95,6 +113,24 @@ export const courses: Course[] = [
     title: "GNM",
     description: "General Nursing & Midwifery",
     icon: Stethoscope,
+    comingSoon: true,
+  },
+  {
+    title: "DMLT",
+    description: "Diploma in Medical Laboratory Technology",
+    icon: FlaskConical,
+    comingSoon: true,
+  },
+  {
+    title: "DRT",
+    description: "Diploma in Radiography Technology",
+    icon: ScanLine,
+    comingSoon: true,
+  },
+  {
+    title: "DOT",
+    description: "Diploma in Operation Theatre Technology",
+    icon: Syringe,
     comingSoon: true,
   },
   {
@@ -133,6 +169,18 @@ export const galleryCategories: GalleryCategory[] = [
     title: "Library",
     description:
       "A calm, well-stocked space for study and research. Our library gives students access to a growing collection of books, journals and digital resources in a focused, welcoming environment.",
+  },
+  {
+    tag: "anatomylab",
+    title: "Anatomy Lab",
+    description:
+      "Our anatomy laboratory offers students hands-on exposure to human anatomy through specimens, models and guided study — a vital foundation for our medical, nursing and paramedical programmes.",
+  },
+  {
+    tag: "Panchakarma",
+    title: "Panchakarma Department",
+    description:
+      "Our Panchakarma department provides authentic Ayurvedic detoxification and rejuvenation therapies. Here students gain practical, supervised training in traditional healing practices, learning time-honoured techniques that sit at the heart of Ayurvedic care.",
   },
 ];
 
